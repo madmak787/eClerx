@@ -1,0 +1,336 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.filtersSection {
+  background: white;
+  padding: 20px 32px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  position: relative; /* ensure filters section doesn't clip dropdowns */
+  z-index: 1;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative; /* required for absolute positioned dropdown children */
+}
+
+.filterLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filterInput {
+  padding: 10px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+  background: white;
+}
+
+.filterInputLarge {
+  width: 300px;
+}
+
+.filterSelect {
+  padding: 10px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+  background: white;
+  cursor: pointer;
+}
+
+.searchButton {
+  padding: 10px;
+  background-color: #4199f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.searchButton svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.searchButton:hover {
+  background-color: #0052a3;
+}
+
+.downloadButton {
+  padding: 10px;
+  background-color: #4199f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s ease;
+}
+
+.downloadButton:hover:not(:disabled) {
+  background-color: #0052a3;
+}
+
+.downloadButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.mainContent {
+  display: flex;
+  flex: 1;
+  padding: 20px 32px;
+  gap: 20px;
+}
+
+.sidebar {
+  width: 380px;
+  background: #f1f5fa;
+  border-radius: 4px;
+  padding: 20px 0;
+  height: fit-content;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.sidebarTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #4199f3;
+}
+
+.productItemWrapper {
+  padding: 16px 32px;
+  background: #f1f5fa;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
+}
+
+/* .productItemWrapper:hover, */
+.activeItem {
+  background: #fff;
+  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+}
+
+.productItem {
+  display: flex;
+  gap: 12px;
+}
+
+.productItemNumber {
+  width: 32px;
+  height: 32px;
+  background: #4199f3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.productItemContent {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.productItemRow {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 4px;
+  font-weight: 500;
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+
+.productItemRow:last-child {
+  border-right: none;
+}
+
+.productItemLabel {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.productItemValue {
+  color: #666;
+}
+
+.productItemLink {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.productItemDetail {
+  color: #4199f3;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.productItemDetail:hover {
+  text-decoration: underline;
+}
+
+.contentArea {
+  flex: 1;
+}
+
+.contentHeader {
+  background: #e8f0ff;
+  padding: 16px 20px;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid #b3d9ff;
+}
+
+.contentHeaderTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contentTable {
+  background: white;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.contentTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contentTable th {
+  background-color: white;
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: 13px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.contentTable td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+.contentTable tr:hover {
+  background-color: #f9f9f9;
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.sortIcon {
+  color: #999;
+  font-size: 12px;
+}
+
+.uploadButtonContainer {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.uploadButton {
+  padding: 12px 24px;
+  background-color: #4199f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.uploadButton:hover {
+  background-color: #0052a3;
+}
+
+.emptyState {
+  padding: 60px 20px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .mainContent {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .filtersSection {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .filterInput,
+  .filterSelect {
+    width: 100%;
+  }
+
+  .downloadButton {
+    margin-left: 0;
+    width: 100%;
+  }
+}
