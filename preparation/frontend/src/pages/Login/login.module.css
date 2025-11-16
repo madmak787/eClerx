@@ -1,0 +1,169 @@
+.loginContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.loginLeft {
+  flex: 1;
+  background: linear-gradient(135deg, #002b7f 0%, #003d99 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: white;
+}
+
+.loginLogo {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.loginTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.loginSubtitle {
+  font-size: 16px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.loginRight {
+  flex: 1;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.loginFormContainer {
+  width: 100%;
+  max-width: 360px;
+}
+
+.loginFormTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.loginFormSubtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.loginFormGroup {
+  margin-bottom: 20px;
+}
+
+.loginFormLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.loginFormInput {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.loginFormInput:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.loginFormRemember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.loginFormCheckbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #0066cc;
+}
+
+.loginFormSubmit {
+  width: 100%;
+  padding: 12px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.loginFormSubmit:hover {
+  background-color: #0052a3;
+}
+
+.loginFormLink {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #666;
+}
+
+.loginFormLinkAnchor {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.loginFormLinkAnchor:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+    flex-direction: column;
+  }
+
+  .loginLeft {
+    min-height: 200px;
+    padding: 20px;
+  }
+
+  .loginTitle {
+    font-size: 24px;
+  }
+
+  .loginSubtitle {
+    font-size: 14px;
+  }
+
+  .loginRight {
+    padding: 20px;
+  }
+
+  .loginFormContainer {
+    max-width: 100%;
+  }
+
+  .loginFormTitle {
+    font-size: 22px;
+  }
+}
